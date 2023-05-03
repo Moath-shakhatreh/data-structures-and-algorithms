@@ -3,10 +3,14 @@ Reverse an array
 Function that take an array and return the array but reversed
 
 ## Whiteboard Process
-![Whiteboard](./reversArray.jpg)
+![Whiteboard](./reverseArray2.jpg)
 
 ## Approach & Efficiency
-BigO O(N)
+BigO 
+
+Space: O(N)  because it depend on the array size
+
+Time: O(n)  also because it depend on the array size
 
 ## Solution
 python array-reverse.py
