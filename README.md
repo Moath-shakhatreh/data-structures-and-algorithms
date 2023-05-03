@@ -1,5 +1,6 @@
 # data-structures-and-algorithms
 
+
 ## Table of content
 
 | '#'  | Content |
