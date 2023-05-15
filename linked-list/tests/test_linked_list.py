@@ -62,4 +62,65 @@ def test_values_colliction_of_the_LinkedTest():
     expected = '{same} -> {yaman} -> {ahmad} -> None'
     assert actual == expected
 
+def test_adding_Node_To_The_End_Of_The_List():
+    ahmad = Node(1)
+    lH = LinkedList(ahmad)
+    lH.append(2)                 # adding 2 after 1
+    actual = lH.to_string()
+    expected = '{1} -> {2} -> None'
+    assert actual == expected
+
+def test_adding_Multiple_Nodes_To_The_End_Of_The_List():
+    ahmad = Node(1)
+    lH = LinkedList(ahmad)
+    lH.append(2)                  # adding 2 after 1
+    lH.append(3)                  # adding 3 after 2
+    actual = lH.to_string()
+    expected = '{1} -> {2} -> {3} -> None'
+    assert actual == expected
+
+def test_inserting_node_before_node_located_in_the_middle_of_linkedlist():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)         
+    same = Node(1,yaman)
+    lH = LinkedList(same)
+    lH.insert_before(2,4)          # insert 4 before the middle of the list
+    actual = lH.to_string()
+    expected = '{1} -> {4} -> {2} -> {3} -> None'
+    assert actual == expected
+
+def test_inserting_node_before_in_the_beginning_of_linkedlist():
+    ahmad = Node(1)
+    lH = LinkedList(ahmad)          
+    lH.insert_before(1,0)           # insert 0 in the begining of the list
+    actual = lH.to_string()
+    expected = '{0} -> {1} -> None'
+    assert actual == expected
+
+def test_insert_node_after_node_in_the_middle_of_the_linkedlist():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)
+    lH = LinkedList(same) 
+    lH.insert_after(2,4)             # insert 4 after the middle node
+    actual = lH.to_string()
+    expected = '{1} -> {2} -> {4} -> {3} -> None'
+    assert actual == expected
+
+
+def test_insert_node_after_last_node_in_the_linkedlist():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)
+    lH = LinkedList(same)
+    lH.insert_after(3,4)             # insert 4 to the end of the list
+    actual = lH.to_string()
+    expected = '{1} -> {2} -> {3} -> {4} -> None'
+    assert actual == expected
+
+
+
+    
+
+    
 
