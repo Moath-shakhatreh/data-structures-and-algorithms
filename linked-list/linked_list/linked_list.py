@@ -7,6 +7,9 @@ class Node():
         self.value = value
         self.next = next
 
+ 
+
+
 class LinkedList():
     '''
     This class is used to chose the node that will be 
@@ -107,6 +110,40 @@ class LinkedList():
              return
           current = current.next
 
+    def linkLength(self):
+        length = 0
+        current_node = self.head
+        while current_node:
+            length += 1
+            current_node = current_node.next_node
+        return length
+    
+    def linkLength(self):
+        length = 0
+        current_node = self.head
+        while current_node:
+            length += 1
+            current_node = current_node.next_node
+        return length
+    
+    def kthFromEnd(self, k):
+        length = self.linkLength()
+
+        if self.head is None:
+            print("Linked list is empty!")
+            return
+
+        if k < 0:
+            k = length + k
+
+        if k < 0 or k > length:
+            return "Exception"
+
+        current_node = self.head
+        for _ in range(length - k - 1):
+            current_node = current_node.next_node
+        return current_node.value
+
     
 
              
@@ -116,6 +153,7 @@ class LinkedList():
 if __name__ == '__main__':
     
     moath = Node('moath')
+    print(moath.value)
     # ahamd = Node('ahmad',moath)
     # lH = LinkedList()
     lH = LinkedList(moath)
