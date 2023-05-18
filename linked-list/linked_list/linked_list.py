@@ -7,6 +7,9 @@ class Node():
         self.value = value
         self.next = next
 
+ 
+
+
 class LinkedList():
     '''
     This class is used to chose the node that will be 
@@ -107,6 +110,59 @@ class LinkedList():
              return
           current = current.next
 
+
+
+    def kth_from_end(self,k):
+        '''
+        function that take argument: a number, k,
+        as a parameter and Return the node’s value 
+        that is k places from the tail of the linked list.
+        '''
+
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        
+        if k >= length :
+           return "Out of range"
+        
+        if k < 0 :
+           return "Please inter a positive index"
+        
+        round = length - k -1
+        current = self.head
+
+        while round != 0 :
+           current = current.next
+           round-=1
+        return current.value
+    
+
+           
+    def linkedlist_middle (self):       # Stretch Goal
+        '''
+        function that return the value of
+        the node in the middle of the linked
+        list
+        '''
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        length = length//2
+
+        current = self.head
+        while length != 0 :
+           current = current.next
+           length -=1
+        return current.value
+           
+           
+           
+
     
 
              
@@ -116,6 +172,7 @@ class LinkedList():
 if __name__ == '__main__':
     
     moath = Node('moath')
+    print(moath.value)
     # ahamd = Node('ahmad',moath)
     # lH = LinkedList()
     lH = LinkedList(moath)
@@ -127,6 +184,8 @@ if __name__ == '__main__':
     lH.insert_after('yazeed','samah')
     print(lH.to_string())
     print(lH.head.value)
+    print(lH.kth_from_end(4))
+    print(lH.linkedlist_middle())
     
     
     
