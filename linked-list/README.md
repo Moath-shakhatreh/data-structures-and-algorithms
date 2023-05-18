@@ -1,5 +1,5 @@
 # Singly Linked Lists
-Creating singly linked list with properites and methods to insert nodes to the list and showing all list nodes 
+Creating singly linked list with properites and methods to insert nodes to the list , showing all list nodes and finding the kth node from the tail in the linked list.
 
 ## Whiteboard Process
 >Normal insert
