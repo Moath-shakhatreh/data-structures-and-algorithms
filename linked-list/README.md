@@ -11,7 +11,7 @@ Creating singly linked list with properites and methods to insert nodes to the l
 >Insert_after
 ![insert_after](./insert_after.jpg)
 >kth_from_end
-![kth_from_end](./kth.jpg)
+![kth_from_end](./kth_.jpg)
 ## Approach & Efficiency
 
 BigO:
