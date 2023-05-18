@@ -118,6 +118,49 @@ def test_insert_node_after_last_node_in_the_linkedlist():
     expected = '{1} -> {2} -> {3} -> {4} -> None'
     assert actual == expected
 
+def test_if_k_is_greater_than_the_length_of_the_linked_list():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)
+    lH = LinkedList(same)
+    actual = lH.kth_from_end(4)          # 4 is out of the range
+    expected = 'Out of range'
+    assert actual == expected
+
+def test_if_k_and_the_length_of_the_list_are_the_same():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)                 
+    lH = LinkedList(same)
+    actual = lH.kth_from_end(3) # 3 is equal to linked list length but the result will be (out of range) becouse the linked list kth start from zero not from one
+    expected = 'Out of range'
+    assert actual == expected
+
+def test_Where_k_is_not_a_positive_integer():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)                 
+    lH = LinkedList(same)
+    actual = lH.kth_from_end(-1)
+    expected = "Please inter a positive index"
+    assert actual == expected
+
+def test_Where_the_linked_list_is_of_a_size_1():
+    ahmad = Node(3)
+    lH = LinkedList(ahmad)
+    actual = lH.kth_from_end(0)
+    expected = 3
+    assert actual == expected
+
+def test_Happy_Path_where_k_is_not_at_the_end_but_somewhere_in_the_middle_of_the_linked_list():
+    ahmad = Node(3)
+    yaman = Node(2,ahmad)
+    same = Node(1,yaman)                 
+    lH = LinkedList(same)
+    actual = lH.kth_from_end(1)     # where 1 indicate the middle of this linked list
+    expected = 2
+    assert actual == expected 
+
 
 
 

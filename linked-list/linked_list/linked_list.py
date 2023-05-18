@@ -110,39 +110,58 @@ class LinkedList():
              return
           current = current.next
 
-    def linkLength(self):
+
+
+    def kth_from_end(self,k):
+        '''
+        function that take argument: a number, k,
+        as a parameter and Return the node’s value 
+        that is k places from the tail of the linked list.
+        '''
+
         length = 0
-        current_node = self.head
-        while current_node:
+        current = self.head
+        while current:
             length += 1
-            current_node = current_node.next_node
-        return length
+            current = current.next
+        
+        if k >= length :
+           return "Out of range"
+        
+        if k < 0 :
+           return "Please inter a positive index"
+        
+        round = length - k -1
+        current = self.head
+
+        while round != 0 :
+           current = current.next
+           round-=1
+        return current.value
     
-    def linkLength(self):
+
+           
+    def linkedlist_middle (self):       # Stretch Goal
+        '''
+        function that return the value of
+        the node in the middle of the linked
+        list
+        '''
         length = 0
-        current_node = self.head
-        while current_node:
+        current = self.head
+        while current:
             length += 1
-            current_node = current_node.next_node
-        return length
-    
-    def kthFromEnd(self, k):
-        length = self.linkLength()
+            current = current.next
+        length = length//2
 
-        if self.head is None:
-            print("Linked list is empty!")
-            return
-
-        if k < 0:
-            k = length + k
-
-        if k < 0 or k > length:
-            return "Exception"
-
-        current_node = self.head
-        for _ in range(length - k - 1):
-            current_node = current_node.next_node
-        return current_node.value
+        current = self.head
+        while length != 0 :
+           current = current.next
+           length -=1
+        return current.value
+           
+           
+           
 
     
 
@@ -165,6 +184,8 @@ if __name__ == '__main__':
     lH.insert_after('yazeed','samah')
     print(lH.to_string())
     print(lH.head.value)
+    print(lH.kth_from_end(4))
+    print(lH.linkedlist_middle())
     
     
     

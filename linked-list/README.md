@@ -10,19 +10,27 @@ Creating singly linked list with properites and methods to insert nodes to the l
 ![insert_before](./insert_before.jpg)
 >Insert_after
 ![insert_after](./insert_after.jpg)
-
+>kth_from_end
+![kth_from_end](./kth.jpg)
 ## Approach & Efficiency
-BigO:
 
-### Normal insert
+BigO:
 ```
+### Normal insert:
+
 time: O(1)
 space: O(1)
-```
+
 ### adding ,insert_befor and insert_after
-```
+
 time: O(n) where n the iteration number until we find the specific value
 space: O(1)
+
+### kth_from_end:
+
+time: O(n) where n the number of iteration depend on k
+space: O(1)
+
 ```
 ## Solution
 ``` python
@@ -89,4 +97,53 @@ def insert_after(self,value,new_value):
              current.next = new_node
              return
           current = current.next
+
+def kth_from_end(self,k):
+        '''
+        function that take argument: a number, k,
+        as a parameter and Return the node’s value 
+        that is k places from the tail of the linked list.
+        '''
+
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        
+        if k >= length :
+           return "Out of range"
+        
+        if k < 0 :
+           return "Please inter a positive index"
+        
+        round = length - k -1
+        current = self.head
+
+        while round != 0 :
+           current = current.next
+           round-=1
+        return current.value
+    
+
+           
+    def linkedlist_middle (self):       # Stretch Goal
+        '''
+        function that return the value of
+        the node in the middle of the linked
+        list
+        '''
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        length = length//2
+
+        current = self.head
+        while length != 0 :
+           current = current.next
+           length -=1
+        return current.value
 ```
+
