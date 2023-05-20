@@ -1,4 +1,4 @@
-# Challenge Title
+# Stack and Queue
 Creat stack and queue  classes with some methods like push and enqueue(for adding) , pop and dequeue (for deleting) , peak (for rading the value on top/front) and finally is_empty method(to if the stack/queue is empty)
 
 ## Whiteboard Process
