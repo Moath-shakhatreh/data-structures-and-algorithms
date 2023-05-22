@@ -159,6 +159,67 @@ class LinkedList():
            current = current.next
            length -=1
         return current.value
+
+
+    def zip_lists(self,list_1 ,list_2 ):
+        '''
+        This function Zip the two linked lists together into one so 
+        that the nodes alternate between the two lists and return 
+        a reference to the the zipped list.
+        '''
+        if list_1.head == None:
+            return list_2
+        if list_2.head == None:
+            return list_1
+        
+        current_1 = list_1.head
+        current_2 = list_2.head
+        while current_1 != None and current_2 != None:
+            next1 = current_1.next
+            next2 = current_2.next
+            current_1.next = current_2
+            current_2.next = next1 or next2
+            current_1 = next1
+            current_2 = next2
+
+        return list_1
+        
+         
+        
+        
+        
+        # current_1 = list_1.head
+        # current_2 = list_2.head
+        # zipped_list = LinkedList()
+        # current = zipped_list.head
+        # current = current_1
+        # return zipped_list
+        # current = current_1
+        # return zipped_list
+        
+        # if current_1 is None and current_2 is None:
+        #     return 
+        # elif current_1 is None:
+        #     current = current_2
+        #     current_2 = current_2.next
+        # elif current_2 is None :
+        #     current = current_1
+        #     current_1 = current_1.next
+        # return zipped_list
+
+        # while True:
+            
+        #     if current_1 is None and current_2 is None:
+        #      return zipped_list
+        #     elif current_2 is None :
+        #      current = current_1.next
+        #      current_1 = current_1.next
+        #      current = current.next
+        #     elif current_1 is None:
+        #      current = current_2
+        #      current_2 = current_2.next
+        #      current = current.next
+        #     return zipped_list
            
            
            
@@ -170,22 +231,38 @@ class LinkedList():
 
 
 if __name__ == '__main__':
+   
+    N_1_c = Node(33)
+    N_1_b = Node(22,N_1_c)
+    N_1_a = Node(11,N_1_b)
+    lis_1 = LinkedList(N_1_a)
+
+    N_2_c = Node(66)
+    N_2_b = Node(55,N_2_c)
+    N_2_a = Node(44,N_2_b)
+    lis_2 = LinkedList(N_2_a)
+
+    print(lis_1.to_string())
+    print(lis_2.to_string())
+    print(LinkedList().zip_lists(lis_1,lis_2).to_string())
+
+    # print(l.to_string())
     
-    moath = Node('moath')
-    print(moath.value)
-    # ahamd = Node('ahmad',moath)
-    # lH = LinkedList()
-    lH = LinkedList(moath)
-    # lH.insert('same')
-    print(lH.include('vvv'))
-    lH.append('yaman')
-    lH.append('feras')
-    lH.insert_before('yaman','yazeed')
-    lH.insert_after('yazeed','samah')
-    print(lH.to_string())
-    print(lH.head.value)
-    print(lH.kth_from_end(4))
-    print(lH.linkedlist_middle())
+    # moath = Node('moath')
+    # print(moath.value)
+    # # ahamd = Node('ahmad',moath)
+    # # lH = LinkedList()
+    # lH = LinkedList(moath)
+    # # lH.insert('same')
+    # print(lH.include('vvv'))
+    # lH.append('yaman')
+    # lH.append('feras')
+    # lH.insert_before('yaman','yazeed')
+    # lH.insert_after('yazeed','samah')
+    # print(lH.to_string())
+    # print(lH.head.value)
+    # print(lH.kth_from_end(4))
+    # print(lH.linkedlist_middle())
     
     
     

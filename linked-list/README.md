@@ -1,5 +1,5 @@
 # Singly Linked Lists
-Creating singly linked list with properites and methods to insert nodes to the list , showing all list nodes and finding the kth node from the tail in the linked list.
+Creating singly linked list with properites and methods to insert nodes to the list , showing all list nodes and finding the kth node from the tail in the linked list, zipped two linked list in one list.
 
 ## Whiteboard Process
 >Normal insert
@@ -12,6 +12,8 @@ Creating singly linked list with properites and methods to insert nodes to the l
 ![insert_after](./insert_after.jpg)
 >kth_from_end
 ![kth_from_end](./kth_.jpg)
+>Zipped linked list
+![Zipped_linked_list](./Zipped-list.jpg)
 ## Approach & Efficiency
 
 BigO:
@@ -30,6 +32,11 @@ space: O(1)
 
 time: O(n) where n the number of iteration depend on k
 space: O(1)
+
+### Zipped linked list
+
+Time: O(n) were n is number of iteration
+Space: O(n) where n is number of new element in the first list
 
 ```
 ## Solution
@@ -127,7 +134,7 @@ def kth_from_end(self,k):
     
 
            
-    def linkedlist_middle (self):       # Stretch Goal
+def linkedlist_middle (self):       # Stretch Goal
         '''
         function that return the value of
         the node in the middle of the linked
@@ -145,5 +152,28 @@ def kth_from_end(self,k):
            current = current.next
            length -=1
         return current.value
+
+def zip_lists(self,list_1 ,list_2 ):
+        '''
+        This function Zip the two linked lists together into one so 
+        that the nodes alternate between the two lists and return 
+        a reference to the the zipped list.
+        '''
+        if list_1.head == None:
+            return list_2
+        if list_2.head == None:
+            return list_1
+        
+        current_1 = list_1.head
+        current_2 = list_2.head
+        while current_1 != None and current_2 != None:
+            next1 = current_1.next
+            next2 = current_2.next
+            current_1.next = current_2
+            current_2.next = next1 or next2
+            current_1 = next1
+            current_2 = next2
+
+        return list_1
 ```
 
