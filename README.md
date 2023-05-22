@@ -11,7 +11,7 @@
 |  4  | [code-challenge 05](./linked-list/README.md)
 |  5  | [code-challenge 06](./linked-list/README.md)
 |  5  | [code-challenge 07](./linked-list/README.md)
-
+|  6  | [code-challenge 08](./linked-list/README.md)
 
 
 

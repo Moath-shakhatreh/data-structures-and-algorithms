@@ -161,6 +161,51 @@ def test_Happy_Path_where_k_is_not_at_the_end_but_somewhere_in_the_middle_of_the
     expected = 2
     assert actual == expected 
 
+def test_when_the_two_linkedlist_are_equal_to_each_other():
+    N_1_c = Node(33)
+    N_1_b = Node(22,N_1_c)
+    N_1_a = Node(11,N_1_b)
+    lis_1 = LinkedList(N_1_a)
+
+    N_2_c = Node(66)
+    N_2_b = Node(55,N_2_c)
+    N_2_a = Node(44,N_2_b)
+    lis_2 = LinkedList(N_2_a)
+    actual = LinkedList().zip_lists(lis_1,lis_2).to_string()
+    expected = '{11} -> {44} -> {22} -> {55} -> {33} -> {66} -> None'
+    assert actual == expected
+
+def test_when_the_two_linkedlist_are_Not_equal_to_each_other():
+    N_1_a = Node(11)
+    lis_1 = LinkedList(N_1_a)
+
+    N_2_c = Node(66)
+    N_2_b = Node(55,N_2_c)
+    N_2_a = Node(44,N_2_b)
+    lis_2 = LinkedList(N_2_a)
+    actual = LinkedList().zip_lists(lis_1,lis_2).to_string()
+    expected = '{11} -> {44} -> {55} -> {66} -> None'
+    assert actual == expected
+
+
+def test_when_the_one_of_The_linkedlists_is_empty():
+    lis_1 = LinkedList()
+
+    N_2_c = Node(66)
+    N_2_b = Node(55,N_2_c)
+    N_2_a = Node(44,N_2_b)
+    lis_2 = LinkedList(N_2_a)
+    actual = LinkedList().zip_lists(lis_1,lis_2).to_string()
+    expected = '{44} -> {55} -> {66} -> None'
+    assert actual == expected
+
+
+def test_when_the_two_of_The_linkedlists_are_empty():
+    lis_1 = LinkedList()
+    lis_2 = LinkedList()
+    actual = LinkedList().zip_lists(lis_1,lis_2).to_string()
+    expected = 'None'
+    assert actual == expected
 
 
 
