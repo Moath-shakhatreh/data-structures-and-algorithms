@@ -1,130 +1,84 @@
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
 class Queue:
-    def __init__(self,front=None,back=None):
-        self.front = front # first node in th queue
-        self.back=back    # last node in queue    
+    def __init__(self):
+        self.front = None
+        self.back = None
 
-    def  enqueue_(self,value) :
-        '''
-        adds a new node with that value to the back of the queue with an O(1) Time performance
+    def enqueue(self, value):
+        new_node = Node(value)
 
-        '''
-        
         if self.back is None:
-            self.back = value
-            self.front = value
+            self.back = new_node
+            self.front = new_node
         else:
-            self.back.next= value
-            self.back = value 
+            self.back.next = new_node
+            self.back = new_node
 
-
-
-    def dequeue_(self):
-        '''
-        Removes the node from the front of the queue and
-        Returns the value from node from the front of the queue
-
-        '''
+    def dequeue(self):
         if self.front is None:
-            raise IndexError("The queue is empty!!")
+            raise IndexError("The queue is empty!")
         else:
             temp = self.front
             self.front = temp.next
             temp.next = None
-            return temp
-        
+            return temp.value
 
-    
-    
     def __str__(self):
-        current=self.front
-        string=""
+        current = self.front
+        string = ""
         while current:
-            string+=f"{current.name}"
-            string+=" -> "
-            current=current.next
-        return string+"None"
-
+            string += str(current.value.name) + " -> "
+            current = current.next
+        return string + "None"
 
 
 class Animal:
-    def __init__(self,name,species,next=None):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.next = next
-
 
 
 class AnimalShelter:
     def __init__(self):
-        self.queue1 = Queue() 
-        self.queue2 = Queue()
+        self.dog_queue = Queue()
+        self.cat_queue = Queue()
 
- 
-    
-    def  enqueue(self,name) :
-        '''
-        adds a new animal 
+    def enqueue(self, animal):
+        if animal.species == "dog":
+            self.dog_queue.enqueue(animal)
+        elif animal.species == "cat":
+            self.cat_queue.enqueue(animal)
 
-        '''
-        self.queue1.enqueue_(name)
-        
-
-
-
-    def dequeue(self,pref):
-        '''
-        Removes the a cat or a dog
-
-        '''
-        if self.queue1.front is None:
-            raise IndexError("The queue is empty!!")
+    def dequeue(self, pref):
+        if pref == "dog":
+            return self.dog_queue.dequeue()
+        elif pref == "cat":
+            return self.cat_queue.dequeue()
         else:
-            temp = self.queue1.front
-            while temp.species != pref :
-                
-                self.queue2.enqueue_(self.queue1.dequeue_())
-                temp = self.queue1.front
-                if temp == None:
-                    print(f'no {pref} in the shelter')
-                    return
-
-                
-            if temp.species == pref:
-                self.queue1.front = temp.next
-                temp.next = None
-
-            current = self.queue1.front
-            while current != None:
-                self.queue2.enqueue_(self.queue1.dequeue_())
-                current = current.next
-                
-            # # current = self.queue2.front
-            # # while current != None:
-            # print('ffff')
-            # z = self.queue2.dequeue_()
-            # self.queue1.enqueue_(z)
-            #     # current = current.next
+            return None
 
 
-    
-            
 
-    
 
-    
-if __name__ ==  "__main__":
-    Q_1 = AnimalShelter()
-    yona = Animal('yona','cat')
-    sam = Animal('sam','dog')
-    jane = Animal('jane','cat')
-    Q_1.enqueue(yona)
-    Q_1.enqueue(sam)
-    Q_1.enqueue(jane)
-    print(Q_1.queue1)
 
-    Q_1.dequeue('dog')
-    print(Q_1.queue2)
-    Q_1.dequeue('cat')
-    print(Q_1.queue2)
+if __name__ == '__main__':
+    animal_shelter = AnimalShelter()
 
-    
+    dog1 = Animal("Buddy", "dog")
+    cat1 = Animal("Whiskers", "cat")
+    dog2 = Animal("Max", "dog")
+
+    animal_shelter.enqueue(dog1)
+    animal_shelter.enqueue(cat1)
+    animal_shelter.enqueue(dog2)
+
+    # print(animal_shelter.dequeue("dog"))  
+    # print(animal_shelter.dequeue("cat"))  
+    # print(animal_shelter.dequeue("dog"))  
+    # print(animal_shelter.dequeue("bird"))  # Output: None
+    print(animal_shelter.dog_queue)
+    print(animal_shelter.cat_queue)
