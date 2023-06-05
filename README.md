@@ -14,6 +14,7 @@
 |  6  | [code-challenge 08](./linked-list/README.md)
 |  7  | [code-challenge 11](./stack-queue-pseudo/README.md)
 |  8  | [code-challenge 12](./stack-queue-animal-shelter/README.md)
+|  8  | [code-challenge 13](./stack-queue-brackets/README.md)
 
 
 

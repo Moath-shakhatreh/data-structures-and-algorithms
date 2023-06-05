@@ -43,6 +43,7 @@ class Animal:
 
 
 class AnimalShelter:
+    
     def __init__(self):
         self.dog_queue = Queue()
         self.cat_queue = Queue()
