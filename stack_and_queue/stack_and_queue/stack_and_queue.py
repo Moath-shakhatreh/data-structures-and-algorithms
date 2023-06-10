@@ -85,7 +85,7 @@ class Queue:
 
         '''
         node = Node(value)
-        if self.back is None:
+        if self.front is None:
             self.back = node
             self.front = node
         else:
@@ -142,7 +142,7 @@ class Queue:
 
 
 if __name__ ==  "__main__":
-    node_1 = Node('ahmad')
+    # node_1 = Node('ahmad')
     stack_01= Stack()
     stack_01.pop()
     # print(stack_01)
