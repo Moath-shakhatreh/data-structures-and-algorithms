@@ -1,5 +1,17 @@
-# Code Challenge: Class 15: Binary Tree and BST Implementation
+# Code Challenge: Class 15 + 16 : Binary Tree and BST Implementation
 
+## Whiteboard Process
+>Maximum value whiteboard:
+![witeboard](./Tree/Untitled%20(23).jpg)
+
+## Approach & Efficiency
+```
+For maximum_value method:
+BigO:
+Time --------------->  O(n)
+Space --------------> O(n)
+where n is the number of element in the tree
+```
 ## Solution
 ```py
 class Tnode:
@@ -86,7 +98,16 @@ class Tree:
 
     _walk(self.root)
     return list_
-    
+
+
+    def maximum_value(self):
+    '''
+    Findind the maximum value stored in the tree
+    '''
+    element = self.pre_order()
+    return max(element)
+
+  
 
 class binary_search_tree(Tree):
 
