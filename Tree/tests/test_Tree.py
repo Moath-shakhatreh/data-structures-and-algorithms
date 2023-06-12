@@ -73,6 +73,28 @@ def test_Returns_true_or_false_for_the_contains_method_given_an_existing_or_non_
     assert actual == expected
 
 
+# tests for maximum_value
+
+def test_finding_the_maximum_value_when_the_tree_is_empty():
+    tree = Tree()
+    actual = tree.maximum_value()
+    expected = 'the tree is empty'
+    assert actual == expected
+
+def test_finding_the_maximum_vlaue_in_the_tree():
+    tree = Tree()
+    tree.root= Tnode(10)
+    tree.root.left=Tnode(20)
+    tree.root.right = Tnode(50)
+    tree.root.left.left = Tnode(30)
+    tree.root.left.right = Tnode(40)
+    tree.root.right.left = Tnode(60)
+    actual = tree.maximum_value()
+    expected = 60
+    assert actual == expected
+    
+
+
 
 
    

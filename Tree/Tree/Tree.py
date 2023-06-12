@@ -112,6 +112,8 @@ class Tree:
     going through the depth (height) of the tree first
     root >>>>> left >>>> right
     '''
+    if self.root == None :
+       return None
     list_ = []
     def _walk(root):
       #root
@@ -170,7 +172,19 @@ class Tree:
 
     _walk(self.root)
     return list_
+  
+
+  def maximum_value(self):
+    '''
+    Findind the maximum value stored in the tree
+    '''
+    if self.root == None:
+       return 'the tree is empty'
+    element = self.pre_order()
+    return max(element)
     
+
+
 
 class binary_search_tree(Tree):
 
@@ -231,6 +245,16 @@ class binary_search_tree(Tree):
           current = current.right
           continue
     return False
+  
+
+
+
+  
+    
+   
+
+    
+     
 
      
 
@@ -244,7 +268,7 @@ class binary_search_tree(Tree):
 
 if __name__ == "__main__":
   # tree = Tree()
-  tree = binary_search_tree()
+  tree = Tree()
   
   tree.root= Tnode(10)
   # tree.Add(5)
@@ -262,6 +286,7 @@ if __name__ == "__main__":
   
   # # print(Tnode(20).left)
   print(tree.pre_order()) 
-  print(tree.in_order())
-  print(tree.post_order())
-  print(tree.Contains(20))
+  print(tree.maximum_value())
+  # print(tree.in_order())
+  # print(tree.post_order())
+  # print(tree.Contains(20))
