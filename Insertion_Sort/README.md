@@ -26,20 +26,23 @@ InsertionSort(int[] input)
 Sample array [8,4,23,42,16,15]
 
 
-step_1 :
+### step_1 :
+```
 Create an empty array to hold the sorted elements.
 
 Sorted Array: []
-
-Step 2: Insert the first element
+```
+### Step 2: Insert the first element
+```
 Since the sorted array is empty, we directly insert the first element of the input array.
 
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [8]
-
-Step 3: Insert the remaining elements
+```
+### Step 3: Insert the remaining elements
+```
 Starting from index 1, iterate through the input array and call the Insert function to insert each element into the sorted array.
- 
+``` 
 ### let's explain how insert function work :
 ```
 The Insert function takes two parameters: sorted, which represents a sorted array, and value, which is the element to be inserted into the sorted array. Here's how the function works:
@@ -66,8 +69,32 @@ Set i to i + 1: i is incremented to move to the next position in the sorted arra
 
 
 Append value to sorted: Once the correct position is found, and the necessary elements are shifted, the value is appended to the sorted array.
-``````
+```
+now let's continue
 
+```
 Insert 4 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8]
+
+Insert 23 into the sorted array:
+Input Array: [8, 4, 23, 42, 16, 15]
+Sorted Array: [4, 8, 23]
+
+Insert 42 into the sorted array:
+Input Array: [8, 4, 23, 42, 16, 15]
+Sorted Array: [4, 8, 23, 42]
+
+Insert 16 into the sorted array:
+Input Array: [8, 4, 23, 42, 16, 15]
+Sorted Array: [4, 8, 16, 23, 42]
+
+Insert 15 into the sorted array:
+Input Array: [8, 4, 23, 42, 16, 15]
+Sorted Array: [4, 8, 15, 16, 23, 42]
+
+Step 4: Return the sorted array
+The sorting process is complete. The sorted array now contains the elements in ascending order.
+
+Final Sorted Array: [4, 8, 15, 16, 23, 42]
+```
