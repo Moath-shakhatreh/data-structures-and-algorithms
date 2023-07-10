@@ -17,6 +17,7 @@
 |  9  | [code-challenge 13](./stack-queue-brackets/README.md)
 |  10  | [code-challenge 15](./Tree/README.md)
 |  11  | [code-challenge 16](./Tree/README.md)
+|  12  | [code-challenge 26](./Insertion_Sort/README.md)
 
 
 
