@@ -18,7 +18,7 @@
 |  10  | [code-challenge 15](./Tree/README.md)
 |  11  | [code-challenge 16](./Tree/README.md)
 |  12  | [code-challenge 26](./Insertion_Sort/README.md)
-
+|  13  | [code-challenge 27](./merg_sort/README.md)
 
 
 
