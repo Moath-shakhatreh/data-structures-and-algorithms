@@ -98,3 +98,16 @@ The sorting process is complete. The sorted array now contains the elements in a
 
 Final Sorted Array: [4, 8, 15, 16, 23, 42]
 ```
+
+## Effeciency
+
+Time Complexity:
+
+for the insert function it's O(n), as it may need to shift all the elements to the right in the sorted list.
+Therefore, the overall time complexity of the InsertionSort function is O(n^2).
+
+Space Complexity:
+
+The space complexity of the Insert function is O(1) since it only uses a constant amount of additional space for the temp variable.
+The space complexity of the InsertionSort function is O(n) since it creates a new sorted list
+Therefore, the overall space complexity of the algorithm is O(n).
