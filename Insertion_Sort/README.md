@@ -31,7 +31,9 @@ Sample array [8,4,23,42,16,15]
 Create an empty array to hold the sorted elements.
 
 Sorted Array: []
+
 ```
+![Alt text](<Untitled (27).jpg>)
 ### Step 2: Insert the first element
 ```
 Since the sorted array is empty, we directly insert the first element of the input array.
@@ -39,10 +41,12 @@ Since the sorted array is empty, we directly insert the first element of the inp
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [8]
 ```
+![Alt text](<Untitled (28).jpg>)
 ### Step 3: Insert the remaining elements
 ```
 Starting from index 1, iterate through the input array and call the Insert function to insert each element into the sorted array.
 ``` 
+
 ### let's explain how insert function work :
 ```
 The Insert function takes two parameters: sorted, which represents a sorted array, and value, which is the element to be inserted into the sorted array. Here's how the function works:
@@ -76,19 +80,27 @@ now let's continue
 Insert 4 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8]
-
+```
+![Alt text](<Untitled (29).jpg>)
+```
 Insert 23 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8, 23]
-
+```
+![Alt text](<Untitled (30).jpg>)
+```
 Insert 42 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8, 23, 42]
-
+```
+![Alt text](<Untitled (31).jpg>)
+```
 Insert 16 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8, 16, 23, 42]
-
+```
+![Alt text](<Untitled (32).jpg>)
+```
 Insert 15 into the sorted array:
 Input Array: [8, 4, 23, 42, 16, 15]
 Sorted Array: [4, 8, 15, 16, 23, 42]
@@ -98,9 +110,10 @@ The sorting process is complete. The sorted array now contains the elements in a
 
 Final Sorted Array: [4, 8, 15, 16, 23, 42]
 ```
+![Alt text](<Untitled (33).jpg>)
 
 ## Effeciency
-
+```
 Time Complexity:
 
 for the insert function it's O(n), as it may need to shift all the elements to the right in the sorted list.
@@ -111,3 +124,4 @@ Space Complexity:
 The space complexity of the Insert function is O(1) since it only uses a constant amount of additional space for the temp variable.
 The space complexity of the InsertionSort function is O(n) since it creates a new sorted list
 Therefore, the overall space complexity of the algorithm is O(n).
+```
