@@ -43,10 +43,11 @@ ALGORITHM Merge(left, right, arr)
 ## Trace
 Sample array [8,4,23,42,16,15]
 
-### Step 1:
- ```Initial array [8, 4, 23, 42, 16, 15]
+### Step 1: Initial array [8, 4, 23, 42, 16, 15]
+ ```
 
-The length of the array is n = 6 > 1, so the sorting process begins..```
+The length of the array is n = 6 > 1, so the sorting process begins..
+```
 ![Alt text](<Untitled (34).jpg>)
 
 ### Step 2: Splitting the array
@@ -54,7 +55,8 @@ The length of the array is n = 6 > 1, so the sorting process begins..```
 The array is split into two halves:
 Left half: [8, 4, 23]
 Right half: [42, 16, 15]
-![Alt text](<Untitled (35).jpg>)```
+```
+![Alt text](<Untitled (35).jpg>)
 ### Step 3: Sorting the left half
 ```
 The left half [8, 4, 23] is recursively sorted using the same steps as above.
