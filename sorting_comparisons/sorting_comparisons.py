@@ -55,26 +55,16 @@ movies = [
 ]
 
 if __name__ == "__main__":
-    pass
+    
 
-    # print("Sorted by most recent year:")
-    # sorted_by_year = sort_by_most_recent_year(movies)
-    # for movie in sorted_by_year:
-    #     print(f"{movie.title} - {movie.year}")
+    sorted_by_year_list = sort_by_most_recent_year(movies)
+    clearly_list = []
+    for i in sorted_by_year_list :
+        clearly_list.append([i.title,i.year])
+    print(clearly_list)
 
-    # print("\nSorted alphabetically by title (ignoring 'A', 'An', 'The'):")
-    # sorted_by_title = sort_alphabetically_by_title(movies)
-    # for movie in sorted_by_title:
-    #     print(f"{movie.title} - {movie.year}")
-
-    # sorted_by_year_list = sort_by_most_recent_year(movies)
-    # clearly_list = []
-    # for i in sorted_by_year_list :
-    #     clearly_list.append(i.title)
-    # print(clearly_list)
-
-    # sorted_by_title = sort_alphabetically_by_title(movies)
-    # clearly_list = []
-    # for i in sorted_by_title:
-    #     clearly_list.append(i.title)
-    # print(clearly_list)
+    sorted_by_title = sort_alphabetically_by_title(movies)
+    clearly_list = []
+    for i in sorted_by_title:
+        clearly_list.append(i.title)
+    print(clearly_list)

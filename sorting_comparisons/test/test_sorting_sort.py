@@ -7,9 +7,9 @@ def test_sorted_by_year():
     sorted_by_year_list = sort_by_most_recent_year(movies)
     clearly_list = []
     for i in sorted_by_year_list :
-        clearly_list.append(i.title)
+        clearly_list.append([i.title,i.year])
     actuly = clearly_list
-    expected = ['A Quiet Place', 'The Avengers', 'Avatar', 'Anchorman']
+    expected = [['A Quiet Place', 2018], ['The Avengers', 2012], ['Avatar', 2009], ['Anchorman', 2004]]
     assert actuly == expected
 
 def test_sorted_by_title():
