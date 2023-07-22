@@ -6,5 +6,6 @@ The time complexity of most of the methods in the HashTable class is close to O(
 
 The space complexity of the HashTable class is generally O(n), where n is the number of elements in the hash table, considering the space required to store the key-value pairs and the list of keys. The __hash method has a space complexity of O(1), as it only uses a constant amount of memory to compute the hash code
 
+
 ## Solution
 [Solution](./hash__tables.py)
