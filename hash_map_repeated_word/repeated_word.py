@@ -12,7 +12,6 @@ class Node:
       self.value=value
 
 
-
 class LinkedList:
     '''
     what : A class representing a singly linked list data structure
@@ -121,5 +120,24 @@ class HashTable:
     return self.keys
 
 
+
+def repeated_word(input_string):
+    '''
+    Create a hash table to store the words and their occurrences.
+   
+    '''
+    word_table = HashTable()
+
+    words = input_string.lower()
+    words = words.replace(',', '').replace('.', '')
+    words = words.split()
+
+    for x in words:
+        if word_table.has(x):
+            return x
+        else:
+            word_table.set(x, 1)
+
+    return None
 
 
