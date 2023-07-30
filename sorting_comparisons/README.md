@@ -79,3 +79,18 @@ When you run the entire code, you will get the following output:
 ```
 
 The first list contains the titles and years of the movies, sorted in descending order based on the year. The second list contains the titles of the movies, sorted alphabetically while ignoring leading "A"s, "An"s, or "The"s.
+
+```
+BigO :
+
+sort_by_most_recent_year function:
+
+Time Complexity (Big O): O(n log n)
+where 'n' is the number of movies in the input list.
+Space Complexity (Big O): O(n) where 'n' is the number of movies in the input list.
+
+sort_alphabetically_by_title function:
+
+the overall time complexity is O(n k log k).
+where 'k' is the average number of words in a movie title. 
+space complexity of O(n), where 'n' is the number of movies in the input list.```
