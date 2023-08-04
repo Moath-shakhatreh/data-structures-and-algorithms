@@ -58,7 +58,7 @@ class HashTable:
     # code = code % 1024
     # return code
     return reduce(add, [ord(str(char)) for char in key]) * 283 % self.__size
-    return sum([ord(str(char)) for char in key]) * 283 % self.__size
+    # return sum([ord(str(char)) for char in key]) * 283 % self.__size
 
   
     
@@ -106,15 +106,7 @@ class HashTable:
     arg: key
     output: boolean
     '''
-    # index=self.__hash(key)
-    # bucket = self.__buckets[index]
-    # if bucket is not None : 
-    #   curr = bucket.head
-    #   while curr :
-    #     if curr.value[0] == key :
-    #       return True
-    #     curr = curr.next  
-    #   return False  
+    
     if self.get(key):
       return True
     return False  
