@@ -22,7 +22,7 @@
 |  14  | [code-challenge 28](./sorting_comparisons/README.md)
 |  16  | [code-challenge 30](./hash_tables/README.md)
 |  18  | [code-challenge 31](./hash_map_repeated_word/README.md)
-|  18  | [code-challenge 32](./tree_intersection/README.md)
+|  19  | [code-challenge 32](./tree_intersection/README.md)
 
 
 
