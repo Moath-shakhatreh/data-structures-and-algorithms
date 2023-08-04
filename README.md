@@ -23,6 +23,8 @@
 |  16  | [code-challenge 30](./hash_tables/README.md)
 |  18  | [code-challenge 31](./hash_map_repeated_word/README.md)
 |  18  | [code-challenge 32](./tree_intersection/README.md)
+|  17  | [code-challenge 31](./hash_map_repeated_word/README.md)
+
 
 
 
