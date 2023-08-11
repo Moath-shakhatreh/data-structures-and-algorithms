@@ -185,46 +185,6 @@ class LinkedList():
         return list_1
         
          
-        
-        
-        
-        # current_1 = list_1.head
-        # current_2 = list_2.head
-        # zipped_list = LinkedList()
-        # current = zipped_list.head
-        # current = current_1
-        # return zipped_list
-        # current = current_1
-        # return zipped_list
-        
-        # if current_1 is None and current_2 is None:
-        #     return 
-        # elif current_1 is None:
-        #     current = current_2
-        #     current_2 = current_2.next
-        # elif current_2 is None :
-        #     current = current_1
-        #     current_1 = current_1.next
-        # return zipped_list
-
-        # while True:
-            
-        #     if current_1 is None and current_2 is None:
-        #      return zipped_list
-        #     elif current_2 is None :
-        #      current = current_1.next
-        #      current_1 = current_1.next
-        #      current = current.next
-        #     elif current_1 is None:
-        #      current = current_2
-        #      current_2 = current_2.next
-        #      current = current.next
-        #     return zipped_list
-           
-           
-           
-
-    
 
              
            
