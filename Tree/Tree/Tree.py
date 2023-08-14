@@ -84,7 +84,9 @@ class Tree:
 
   def breadth_first(self):
     '''
-    Breadth first traversal iterates through the tree by going through each level of the tree node-by-node. 
+    Breadth first traversal iterates through
+    the tree by going through each level of 
+    the tree node-by-node. 
     '''
     if not self.root:
       return self.root
